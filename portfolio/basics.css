@@ -1,0 +1,223 @@
+* {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    margin:0;
+    padding:0;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+    color: black;
+    /**/
+    font-family: 'Oswald', sans-serif;
+}
+img{
+    width: 100%;
+}
+header{
+    height:100vh;
+    /***div for putting in images later***/
+}
+nav ul{
+    list-style: none;
+    font-family:  'Oswald', sans-serif;
+    font-size: 6em;
+    font-weight: 500;
+    line-height: 150px;
+    /***style your nav here***/
+}
+.image-wrapper{
+    position: relative;
+    background-color: rgb(86,86,86);
+}
+.image-wrapper img {
+    mix-blend-mode: luminosity;
+}
+.project a:hover .image-wrapper img {
+    mix-blend-mode: normal;
+
+}
+.info{
+    position:absolute;
+    top: 50%;
+    opacity: 0;
+    /***info will be with image***/
+}
+.project a:hover .info{
+    opacity: 1;
+
+}
+.background-wrap{
+    position:absolute;
+    z-index: -1000;
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+    top: 0px;
+    left:0;
+}
+
+/*** For video background ***/
+#video-bg-elem{
+    position:absolute;
+    top: 0px;
+    left:0;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+/*** project overlay ***/
+.project-page {
+    position: fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index: 9999999999;
+    background-color: rgba(255,255,255,.95);
+    padding: 3em;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.project-page * {
+    margin-left: auto;
+    margin-right:auto;
+}
+.project-page .container {
+    max-width: 50em;
+}
+.project-page button.close {
+    background-color: transparent;
+    border: 2px solid;
+    border-radius: 50%;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    font-size: 1rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    line-height: 3.5rem;
+}
+
+/* easy class to add to <ul>s to get rid of listy stuff */
+.list-reset {
+    list-style: none;
+    margin:0;
+    padding: 0;
+}
+
+/* try to keep body from scrolling in the background */
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.clearfix::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+
+
+* { box-sizing: border-box;}
+
+body {
+	background: transparent url("960px-12col-58w-24gut.png") center top repeat-y;
+}
+
+.container {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+} 
+
+.row::after {
+	content: " ";
+	display: table;
+	clear: both;
+
+
+}
+
+.row {
+	margin-left: -12px;
+	margin-right: -12px;
+}
+
+/*.columns {
+	float: left;
+	padding-left: 12px;
+	padding-right: 12px;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+/* 2. Column Widths */
+/*=========================================*/
+/*=========================================*/
+
+[class*="col-"] {
+	float: left;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+/*fuck math!*/
+
+.col-1 	{ width: calc(100% / 12 * 1);}
+.col-2 	{ width: calc(100% / 12 * 2);}
+.col-3 	{ width: calc(100% / 12 * 3);}
+.col-4	{ width: calc(100% / 12 * 4);}
+.col-5 	{ width: calc(100% / 12 * 5);}
+.col-6 	{ width: calc(100% / 12 * 6);}
+.col-7 	{ width: calc(100% / 12 * 7);}
+.col-8 	{ width: calc(100% / 12 * 8);}
+.col-9 	{ width: calc(100% / 12 * 9);}
+.col-10 { width: calc(100% / 12 * 10);}
+.col-11 { width: calc(100% / 12 * 11);}
+.col-12 { width: calc(100% / 12 * 12);}
+
+
+
+/* 3. Offsets */
+/*=========================================*/
+/*=========================================*/
+
+.coloffset-1 	{ margin-left: calc(100% / 12 * 1);}
+.coloffset-2 	{ margin-left: calc(100% / 12 * 2);}
+.coloffset-3 	{ margin-left: calc(100% / 12 * 3);}
+.coloffset-4	{ margin-left: calc(100% / 12 * 4);}
+.coloffset-5 	{ margin-left: calc(100% / 12 * 5);}
+.coloffset-6 	{ margin-left: calc(100% / 12 * 6);}
+.coloffset-7 	{ margin-left: calc(100% / 12 * 7);}
+.coloffset-8 	{ margin-left: calc(100% / 12 * 8);}
+.coloffset-9 	{ margin-left: calc(100% / 12 * 9);}
+.coloffset-10 	{ margin-left: calc(100% / 12 * 10);}
+.coloffset-11 	{ margin-left: calc(100% / 12 * 11);}
+.coloffset-12 	{ margin-left: calc(100% / 12 * 12);}
+
+
+/* 4. Other Custom Grid-ular stuff */
+/*=========================================*/
+/*=========================================*/
+
+/* Print the grid in the background */
+header, #main, footer {
+/*   background: transparent url(960px-12col-58w-24gut.png) center top repeat-y; */
+}
