@@ -1,55 +1,58 @@
 <!doctype html>
 
 <html>
-  <head>
-    <!-- this is the proper meta tag to use common special characters, etc. -->
+<head>
     <meta charset="UTF-8" />
-
-    <!-- this is necessary for responsive @media queries to work properly -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- The Title to your website. Shows in the browser tab or window, as well as in search engine results. Not actually on the page anywhere -->
-    <title>Debby Kim</title>
-
+    <title>Debby Kim Designs</title>
     <link href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" type="text/css" rel="stylesheet" />
     <link href="basics.css" type="text/css" rel="stylesheet" />
     <link href="responsive.css" type="text/css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+</head>
 
-  </head>
+<body>
+<header>
+    <a href="#body"><img src= "DebbySignature.jpg" alt="DebbyKim" id="logo"></a>     
+</header>
 
-  <body>
-    <header>
-        <nav class="col-3">
+<main>
+    <div class="mainstyle">
+    <nav class="col-3 row">
         <ul>
-            <li><a href="behance-magix">WORKS</a></li>
-            <li><a href="">ABOUT</a></li>
-            <li><a href="">CONTACT</a></li>
+            <li><a href="#behance-magix">WORKS</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
-    <div class="background-wrap">
         
+   <div class="background-wrap">
         <video id="video-bg-elem" preload="auto" autoplay="true" loop="loop" muted="muted">
-            <source src="video_bg_loop.mp4" type="video/mp4">
-            Video Not Supported!
-        </video>
-        
+        <source src="video_bg_loop.mp4" type="video/mp4">
+        Video Not Supported!
+        </video> 
+    </div>
+    </div>
+    
+    <div id="about">
+        <div class="col-4 aboutplacement">
+            <h1 class="hellofont">HELLO, I'M DEBBY.</h1>
+            
+            <p class="paragraphfont">I am a Graphic Designer from Philadelphia living in Baltimore. Artworks and illustrations were my gateway to the creative industry which led to my first steps in the digital world through my stay at Maryland Institute College of Art. I have a passion for packaging design and branding!</p>
+            <a class="resume"href="DebbyKimResume2017.pdf" target="blank">Resume</a>
         </div>
-      </header>
-
-    <main>
-      <h1></h1>
-
-      <div id="behance-magix" class="clearfix">
-        <!-- insert some HTML via magic JS -->
-        <!-- this initially seeds the main div and shows something here even if JS doesn't load -->
+    </div>
+    
+    <div id="behance-magix" class="clearfix">
         <p>Please bare with me! Loading...</p>
+        <div>
         <script id="project-cards" type="text/template">
           {{#projects}}
           <div class="project col-4" id="b{{id}}">
             <a href="#{{id}}" data-project-id="{{id}}">
               <div class="image-wrapper">
-                <img src="{{covers.404}}" alt="{{name}}" />
+                <div class="bgimg" style="background-image: url('{{covers.404}}')">
+                </div>
                 <div class="info">
                 <h2 class="name">{{name}}</h2>
               </div>
@@ -58,13 +61,30 @@
           </div>
           {{/projects}}
         </script>
+        </div>
+    </div>
+    
+    
+    <div id="contact">
+        <div class="col-4">
+            <h1 class="hellofont">Lets Talk</h1>
+            
+            <p class="paragraphfont">dkim04@gmail.com</p>
+        </div>
+    </div>
+</main>
 
-      </div>
-    </main>
+<footer>
+    <div id="social_media">
+        <a href="https://www.facebook.com/debifythat">
+        <i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/debifythat/"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/debby-kim-179566130?trk=nav_responsive_tab_profile_pic"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+        <a href="https://www.behance.net/dkim0448c3"><i class="fa fa-behance fa-2x" aria-hidden="true"></i></a>
 
-    <footer>
-      <p>© copyright <span class="year dynamic">2017</span> DebbyKim</p>
-    </footer>
+    </div>
+        <p>© copyright <span class="year dynamic">2017</span> Debby Kim</p>
+</footer>
 
     <div id="dynamic-pages">
       <!-- individual pages will appear to "print" here -->
@@ -114,6 +134,19 @@
         var template = $('#project-cards').html();
         var info = Mustache.to_html(template, data);
         $('#behance-magix').html(info);
+           $('#smile').ready(function(){
+       
+       $('.smiel').mouseover(function()
+       {
+          $(this).css("cursor","pointer");
+          $(this).animate({width: "200"}, 'fast');
+       });
+    
+    $('#hi-magix').mouseout(function()
+      {   
+          $(this).animate({width: "200"}, 'fast');
+       });
+   });
 
         $('.project a').click(function() {
           // each project has a unique ID, we need it to build our project JSON url
@@ -147,6 +180,7 @@
           });
         });
       });
+        
     </script>
 
     <!-- this is the template for our individual projects   -->
@@ -183,7 +217,7 @@
             </small>
           </p>
         </div>
-        <button class="close"><i class="fa fa-times fa-2x"></i></button>
+        <button class="close"><i class="fa fa-times"></i></button>
       </div>
     </script>
   </body>
