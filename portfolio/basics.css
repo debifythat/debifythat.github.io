@@ -78,6 +78,7 @@ nav ul{
 nav a{
     color: white;
     text-decoration: none;
+
 }
 nav a:hover{
     color: rgb(104,129,136);
@@ -218,6 +219,10 @@ footer{
     width: 100%;
     z-index: 500;
     padding-top: 2em;
+}
+.copyright{
+    font-family: 'Raleway', sans-serif;
+    font-size: .5em;
 }
 
 
