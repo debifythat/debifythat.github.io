@@ -186,14 +186,29 @@ h2{
     line-height: 100%;
 }
 .paragraphfont {
-    font-family: 'Quattrocento', serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 500;
     color: white;
     font-size: 1.3em;
     padding-top: 1em;
 }
+.hellofont2 {
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    font-size: 6em;
+    line-height: 100%;
+    letter-spacing: .05em;
+}
+.paragraphfont2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    color: white;
+    font-size: 1.2em;
+    padding-top: 1em;
+}
 #contact{
-    
+    height: 100vh;
+    background-color: rgb(104,129,136);
 }
 #social_media i{
     padding: .2em;
@@ -201,14 +216,14 @@ h2{
 }
 footer{
     width: 100%;
-    text-align: center;
     z-index: 500;
+    padding-top: 2em;
 }
 
 
 /*** project overlay ***/
 .project-page {
-    font-family: 'Oswald', sans-serif;
+    font-family:'Raleway', sans-serif;
     line-height: 2em;
     position: fixed;
     top:0;
@@ -222,6 +237,8 @@ footer{
     -webkit-overflow-scrolling: touch;
 }
 .project-page * {
+    color:rgb(104,129,136);
+    padding-bottom: 1em;
     margin-left: auto;
     margin-right:auto;
 }
@@ -288,7 +305,19 @@ footer{
 }*/
 
 
+.flex{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    justify-content: center;
+}
 
+.footer-flex{
+    position:relative;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
 
 
 
